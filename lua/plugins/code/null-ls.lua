@@ -7,7 +7,7 @@ return {
         sources = {
           -- 添加 Prettier 支持
           null_ls.builtins.formatting.prettier.with({
-            filetypes = { "scss", "css", "less", "html", "javascript", "typescript" },
+            filetypes = { "scss", "css", "less", "html", "javascript", "typescript", "json" },
           }),
         },
       })
