@@ -15,19 +15,35 @@ macOS 热键召唤工具（实现 kitty 类似 iterm2 的 Quake(全局热键召�
 
 ```
 ~ » nvim ~/.hammerspoon/init.lua
+-- 用于记录上一次的应用
+local lastApp = nil
+
 hs.hotkey.bind({"ctrl"}, "a", function()
-    local appName = "kitty"
-    local app = hs.application.find(appName)
+    local appname = "kitty"
+    local app = hs.application.find(appname)
 
     if app then
         if app:isFrontmost() then
-            app:hide()
+            -- 隐藏前先检查有没有记录的 app
+            if lastApp and lastApp:bundleID() ~= app:bundleID() then
+                app:hide()
+                lastApp:activate()
+            else
+                app:hide()
+            end
         else
+            -- 记录当前激活的 app（不是 kitty）
+            local frontApp = hs.application.frontmostApplication()
+            if frontApp:bundleID() ~= app:bundleID() then
+                lastApp = frontApp
+            end
             app:unhide()
             app:activate()
         end
     else
-        hs.application.launchOrFocus(appName)
+        -- 记录当前激活的 app，kitty 不存在的情况
+        lastApp = hs.application.frontmostApplication()
+        hs.application.launchOrFocus(appname)
     end
 end)
 ```
