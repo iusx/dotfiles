@@ -1,16 +1,13 @@
--- 模糊搜索器
-
 return {
   {
-    'linrongbin16/fzfx.nvim',
-    keys = {
-      { '<leader>ff', '<CMD>FzfxFiles<CR>', { desc = 'find files' } },
-      { '<leader>fb', '<CMD>FzfxBuffers<CR>', { desc = 'find buffers' } },
-      { '<leader>fm', '<CMD>FzfxMarks<CR>', { desc = 'find marks' } },
-      { '<leader>sg', '<CMD>FzfxGLiveGrep<CR>', { desc = 'grep search in files' } },
+    "ray-x/fzfx.nvim",
+    dependencies = {
+      "ibhagwan/fzf-lua",
+      "nvim-tree/nvim-web-devicons",
+      "nvim-lua/plenary.nvim",
     },
     config = function()
-      require('fzfx').setup()
+      require("fzfx").setup()
     end,
   },
 }
