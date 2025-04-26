@@ -1,13 +1,10 @@
 return {
   {
-    "ray-x/fzfx.nvim",
-    dependencies = {
-      "ibhagwan/fzf-lua",
-      "nvim-tree/nvim-web-devicons",
-      "nvim-lua/plenary.nvim",
-    },
-    config = function()
-      require("fzfx").setup()
-    end,
+    "ibhagwan/fzf-lua",
+    -- optional for icon support
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    -- or if using mini.icons/mini.nvim
+    -- dependencies = { "echasnovski/mini.icons" },
+    opts = {},
   },
 }
