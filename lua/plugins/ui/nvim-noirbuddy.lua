@@ -25,7 +25,11 @@ return {
         require("noirbuddy").setup(noiropts)
         vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#00D9BD", bold = true })
         vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#323232", bg = "NONE" })
-     end,
+        vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+        vim.cmd("hi NormalNC guibg=NONE ctermbg=NONE")
+        vim.cmd("hi StatusLine guibg=NONE ctermbg=NONE")
+        vim.cmd("hi VertSplit guibg=NONE ctermbg=NONE")
+      end,
     },
   },
 }
