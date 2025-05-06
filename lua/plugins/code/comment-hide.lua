@@ -2,7 +2,7 @@
 --[[   { ]]
 --[[     dir = "/Users/rhyme/Code/project/Jiangxue/nvim.comment-hide", ]]
 --[[     name = "comment-hide", ]]
---[[     dev = true,]]
+--[[     dev = true, ]]
 --[[     config = function() ]]
 --[[       require("comment-hide").setup() ]]
 --[[     end, ]]
