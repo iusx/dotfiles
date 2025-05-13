@@ -55,6 +55,7 @@ return {
       typescript = { "prettier" },
       javascriptreact = { "prettier" },
       typescriptreact = { "prettier" },
+      json = { "prettier" },
     },
     formatters = {
       prettier = {

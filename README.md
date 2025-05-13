@@ -54,12 +54,14 @@ end)
 background_opacity 0.95
 window_title_format {title}
 hide_window_decorations yes
-background_blur 20
+background_blur 70
 font_size 22.0
 font_family Iosevka Nerd Font Mono
-inactive_tab_background #fff
-active_tab_background #00D9BD
-tab_bar_style powerline
+inactive_tab_background #000
+active_tab_background #000
+inactive_tab_foreground #fff
+active_tab_foreground #555555
+tab_bar_style slant
 cursor_trail 1
 ```
 
