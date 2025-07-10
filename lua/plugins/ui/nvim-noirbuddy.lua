@@ -26,6 +26,8 @@ return {
         vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#00D9BD", bold = true })
         vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#323232", bg = "NONE" })
         vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+        vim.api.nvim_set_hl(0, "LineNr", { fg = "#54575D", bg = "NONE" }) 
+        vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#00D9BD", bg = "NONE" }) 
         vim.api.nvim_set_hl(0, "WinBar", { bg = "none" })
         vim.api.nvim_set_hl(0, "WinBarNC", { bg = "none" })
         vim.api.nvim_set_hl(0, "TabLine", { bg = "none" })
