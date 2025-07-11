@@ -11,8 +11,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 brew install --cask hammerspoon
 
-macOS 热键召唤工具（实现 kitty 类似 iterm2 的 Quake(全局热键召唤终端，听起来就很厉害)
-
 ```
 ~ » nvim ~/.hammerspoon/init.lua
 -- 用于记录上一次的应用
@@ -24,7 +22,6 @@ hs.hotkey.bind({"ctrl"}, "a", function()
 
     if app then
         if app:isFrontmost() then
-            -- 隐藏前先检查有没有记录的 app
             if lastApp and lastApp:bundleID() ~= app:bundleID() then
                 app:hide()
                 lastApp:activate()
@@ -32,7 +29,6 @@ hs.hotkey.bind({"ctrl"}, "a", function()
                 app:hide()
             end
         else
-            -- 记录当前激活的 app（不是 kitty）
             local frontApp = hs.application.frontmostApplication()
             if frontApp:bundleID() ~= app:bundleID() then
                 lastApp = frontApp
@@ -41,7 +37,6 @@ hs.hotkey.bind({"ctrl"}, "a", function()
             app:activate()
         end
     else
-        -- 记录当前激活的 app，kitty 不存在的情况
         lastApp = hs.application.frontmostApplication()
         hs.application.launchOrFocus(appname)
     end

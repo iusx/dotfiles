@@ -2,7 +2,7 @@ local noiropts = {
   preset = "minimal",
   colors = {
     primary = "#00D9BD",
-    background = "#000000",
+    background = "#282C34",
   },
 }
 
