@@ -60,6 +60,16 @@ tab_bar_style slant
 cursor_trail 1
 ```
 
+## Ghostty
+
+```
+font-family = "Iosevka Nerd Font Mono" 
+font-size = 22
+
+background-opacity = 0.95
+macos-icon = xray
+```
+
 ## zsh
 
 ```
