@@ -64,17 +64,19 @@ cursor_trail 1
 
 ```
 font-family = "Iosevka Nerd Font Mono" 
-font-size = 22
+font-size = 23
 
 background-opacity = 0.95
 macos-icon = xray
+window-padding-x = 10
+window-padding-y = 10
+window-vsync = true
+quick-terminal-animation-duration = 20
+macos-titlebar-style = tabs
+window-position-x = 500
+window-position-y = 299
 ```
 
-## zsh
-
-```
-ZSH_THEME="minimal"
-```
 
 ## Outher tools
 
