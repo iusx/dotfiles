@@ -60,6 +60,38 @@ tab_bar_style slant
 cursor_trail 1
 ```
 
+## rime
+
+```
+heihei:
+    name: "customized_color_scheme"
+    font_face: "Helvetica"
+    font_point: 20.0
+    candidate_list_layout: linear
+    text_orientation: horizontal
+    inline_preedit: true
+    translucency: true
+    mutual_exclusive: true
+    corner_radius: 5.0
+    hilited_corner_radius: 5.0
+    border_height: 5.0
+    border_width: 5.0
+    line_spacing: 10.0
+    shadow_size: 20.0
+    color_space: display_p3
+    back_color: 0x67000000
+    candidate_text_color: 0xD8FFFFFF
+    comment_text_color: 0x3FFFFFFF
+    label_color: 0xBBBBBB
+    hilited_candidate_back_color: 0xFF733E
+    hilited_candidate_text_color: 0xD8FFFFFF
+    hilited_comment_text_color: 0xFFFFFF
+    hilited_candidate_label_color: 0xD7CBC1
+    text_color: 0x3FFFFFFF
+    hilited_text_color: 0xD8FFFFFF
+
+```
+
 ## Ghostty
 
 ```

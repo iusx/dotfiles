@@ -56,6 +56,8 @@ return {
       javascriptreact = { "prettier" },
       typescriptreact = { "prettier" },
       json = { "prettier" },
+      yaml = { "prettier" },
+      vue = { "prettier" },
     },
     formatters = {
       prettier = {
