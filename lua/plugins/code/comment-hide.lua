@@ -11,7 +11,7 @@
 
 return {
   "jiangxue-analysis/nvim.comment-hide",
-  --[[ dir = "/users/rhyme/code/project/jiangxue/nvim.comment-hide", ]]
+  --[[ dir = "/users/uwu/Code/Project/jiangxue/nvim.comment-hide", ]]
   name = "comment-hide",
   lazy = false,
   config = function()
