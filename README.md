@@ -102,17 +102,22 @@ window-position-x = 500
 window-position-y = 299
 ```
 
-## Outher tools
+## base tools
 
 [Rectangle](https://rectangleapp.com/)
-[hyperswitch](https://bahoom.com/hyperswitch/get)
 [motrix](https://motrix.app/)
 [LocalSend](https://localsend.org/)
 [Ice](https://github.com/jordanbaird/Ice)
-[Skim](https://skim-app.sourceforge.io/)
-[Logoer](https://github.com/lihaoyun6/Logoer)
 [araxis merge](https://www.araxis.com/merge/index.en)
-[kitty](https://github.com/kovidgoyal/kitty)
+
+## chrome
+[kiss-translator](https://github.com/fishjar/kiss-translator)
+[uBlacklist](https://chromewebstore.google.com/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?hl=en)
+[GoFullPage](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)
+
+[tampermonkey](https://www.tampermonkey.net/index.php)
+- [Bilibili](https://greasyfork.org/zh-CN/scripts/481629-bilibili-%E6%8C%89%E6%A0%87%E7%AD%BE-%E6%A0%87%E9%A2%98-%E6%97%B6%E9%95%BF-up%E4%B8%BB%E5%B1%8F%E8%94%BD%E8%A7%86%E9%A2%91)
+
 
 ## 过滤关键词：
 ```
