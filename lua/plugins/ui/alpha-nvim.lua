@@ -19,9 +19,8 @@ return {
       dashboard.section.header.val = vim.split(logo, "\n")
 
       dashboard.section.buttons.val = {
-        dashboard.button("e", "New file"),
+        dashboard.button("e", "New file", ":ene <BAR> startinsert<CR>"),
         dashboard.button("ff", "Find file"),
-        dashboard.button("fh", "Recently opened files"),
         dashboard.button("fr", "Frecency/MRU"),
         dashboard.button("fg", "Find word"),
       }
