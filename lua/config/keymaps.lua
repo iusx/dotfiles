@@ -1,1 +1,1 @@
-vim.opt.rtp:prepend(lazypath)
+vim.keymap.set("n", "<leader>|", ":vsplit<CR>", { desc = "|" })

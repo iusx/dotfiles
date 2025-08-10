@@ -11,7 +11,7 @@ return {
 					"lua_ls",
 					"pyright",
 					"ts_ls",
-					"volar",
+					"vue_ls",
 					"cssls",
 					"html",
 					"emmet_ls",
