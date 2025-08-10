@@ -11,6 +11,10 @@ return {
 					"lua_ls",
 					"pyright",
 					"ts_ls",
+					"volar",
+					"cssls",
+					"html",
+					"emmet_ls",
 				},
 			})
 		end,
@@ -19,10 +23,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig =
-				require("lspconfig")
-			local capabilities =
-				require("cmp_nvim_lsp").default_capabilities()
+			local lspconfig = require("lspconfig")
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -32,7 +34,36 @@ return {
 			})
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
+				init_options = {
+					plugins = {
+						{
+							name = "@vue/typescript-plugin",
+							location = vim.fn.stdpath("data")
+								.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+							languages = { "vue" },
+						},
+					},
+				},
+				filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
 			})
+			lspconfig.volar.setup({
+				capabilities = capabilities,
+				filetypes = { "vue" },
+				init_options = {
+					vue = {
+						hybridMode = true,
+					},
+				},
+			})
+			lspconfig.emmet_ls.setup({
+				capabilities = capabilities,
+				filetypes = { "html", "css", "scss", "less", "javascriptreact", "typescriptreact", "vue" },
+			})
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+				filetypes = { "css", "scss", "less" },
+			})
+			lspconfig.html.setup({ capabilities = capabilities })
 		end,
 	},
 
@@ -50,9 +81,7 @@ return {
 			cmp.setup({
 				snippet = {
 					expand = function(args)
-						require("luasnip").lsp_expand(
-							args.body
-						)
+						require("luasnip").lsp_expand(args.body)
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({

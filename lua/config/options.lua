@@ -16,9 +16,6 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2   
 vim.opt.expandtab = true 
 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldlevel = 99
 
 vim.keymap.set("n", "<C-z>", "u", { desc = "back" })       
 vim.keymap.set("n", "<C-S-z>", "<C-r>", { desc = "back!" })
