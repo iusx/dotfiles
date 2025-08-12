@@ -46,7 +46,7 @@ return {
 				},
 				filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
 			})
-			lspconfig.volar.setup({
+			lspconfig.vue_ls.setup({
 				capabilities = capabilities,
 				filetypes = { "vue" },
 				init_options = {
