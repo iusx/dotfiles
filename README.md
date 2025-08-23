@@ -2,40 +2,6 @@
 
 ---
 
-## Hammerspoon
-
-brew install --cask hammerspoon
-
-```
-~ » nvim ~/.hammerspoon/init.lua
-local lastApp = nil
-
-hs.hotkey.bind({"ctrl"}, "a", function()
-    local appname = "kitty"
-    local app = hs.application.find(appname)
-
-    if app then
-        if app:isFrontmost() then
-            if lastApp and lastApp:bundleID() ~= app:bundleID() then
-                app:hide()
-                lastApp:activate()
-            else
-                app:hide()
-            end
-        else
-            local frontApp = hs.application.frontmostApplication()
-            if frontApp:bundleID() ~= app:bundleID() then
-                lastApp = frontApp
-            end
-            app:unhide()
-            app:activate()
-        end
-    else
-        lastApp = hs.application.frontmostApplication()
-        hs.application.launchOrFocus(appname)
-    end
-end)
-```
 
 ## kitty
 
@@ -86,21 +52,6 @@ heihei:
 
 ```
 
-## Ghostty
-
-```
-font-family = "Iosevka Nerd Font Mono" 
-font-size = 23
-background-opacity = 0.95
-macos-icon = xray
-window-padding-x = 10
-window-padding-y = 10
-window-vsync = true
-quick-terminal-animation-duration = 20
-macos-titlebar-style = tabs
-window-position-x = 500
-window-position-y = 299
-```
 
 ## base tools
 
