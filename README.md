@@ -1,6 +1,4 @@
-# Dotfiles
-
----
+<img width="924" height="600" alt="m 1" src="https://github.com/user-attachments/assets/bb7f80d2-a860-4b14-9ccd-40fd92990a1a" />
 
 
 ## kitty
