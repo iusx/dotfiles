@@ -1,5 +1,14 @@
+export ZSH="$HOME/.oh-my-zsh"
+plugins=(git)
+
+ZSH_THEME="macovsky"
+source $ZSH/oh-my-zsh.sh
+
 export http_proxy="http://127.0.0.1:15732"
 export https_proxy="http://127.0.0.1:15732"
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-autoload -Uz compinit && compinit
 
+export PATH="$HOME/Code/My/cds:$PATH"
+
+# cds config
+cds() { [[ "$1" =~ ^(save|list)$ ]] && command cds "$@" || { local d=$(command cds "$@"); [[ -d "$d" ]] && cd "$d" || echo "$d"; } }
+export PATH="$HOME/.local/bin:$PATH"
