@@ -15,6 +15,7 @@ return {
 					"cssls",
 					"html",
 					"emmet_ls",
+					"nim_langserver",
 				},
 			})
 		end,
@@ -64,6 +65,17 @@ return {
 				filetypes = { "css", "scss", "less" },
 			})
 			lspconfig.html.setup({ capabilities = capabilities })
+			lspconfig.nim_langserver.setup({
+				capabilities = capabilities,
+				settings = {
+					nim = {
+						nimsuggestPath = "~/.nimble/bin/nimsuggest", 
+						autoCheckFile = true,
+						autoCheckProject = true,
+						checkOnSave = true,
+					},
+				},
+			})
 		end,
 	},
 
