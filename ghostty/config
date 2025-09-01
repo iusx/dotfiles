@@ -51,9 +51,10 @@ window-padding-x = 10
 window-padding-y = 10
 window-vsync = true
 quick-terminal-animation-duration = 20
-macos-titlebar-style = hidden
 
 window-position-x = 500
 window-position-y = 299
+theme = Blue Matrix
+
 
 
