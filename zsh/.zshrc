@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 plugins=(git)
 
-ZSH_THEME="nanotech"
+ZSH_THEME="gallifrey"
 source $ZSH/oh-my-zsh.sh
 
 export http_proxy="http://127.0.0.1:15732"
