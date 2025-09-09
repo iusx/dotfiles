@@ -69,11 +69,21 @@ return {
 				capabilities = capabilities,
 				settings = {
 					nim = {
-						nimsuggestPath = "~/.nimble/bin/nimsuggest", 
+						nimsuggestPath = "~/.nimble/bin/nimsuggest",
 						autoCheckFile = true,
 						autoCheckProject = true,
 						checkOnSave = true,
 					},
+				},
+				handlers = {
+					["window/showMessage"] = function(_, result, ctx, config)
+						if
+							result.type == vim.lsp.protocol.MessageType.Warning
+							or result.type == vim.lsp.protocol.MessageType.Error
+						then
+							vim.lsp.handlers["window/showMessage"](_, result, ctx, config)
+						end
+					end,
 				},
 			})
 		end,
