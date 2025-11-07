@@ -24,16 +24,19 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			lspconfig.lua_ls.setup({
+			vim.lsp.config("lua_ls", {
 				capabilities = capabilities,
 			})
-			lspconfig.pyright.setup({
+			vim.lsp.enable("lua_ls")
+
+			vim.lsp.config("pyright", {
 				capabilities = capabilities,
 			})
-			lspconfig.ts_ls.setup({
+			vim.lsp.enable("pyright")
+
+			vim.lsp.config("tsserver", {
 				capabilities = capabilities,
 				init_options = {
 					plugins = {
@@ -47,25 +50,31 @@ return {
 				},
 				filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue" },
 			})
-			lspconfig.vue_ls.setup({
+			vim.lsp.enable("tsserver")
+
+			vim.lsp.config("vue_ls", {
 				capabilities = capabilities,
 				filetypes = { "vue" },
-				init_options = {
-					vue = {
-						hybridMode = true,
-					},
-				},
+				init_options = { vue = { hybridMode = true } },
 			})
-			lspconfig.emmet_ls.setup({
+			vim.lsp.enable("vue_ls")
+
+			vim.lsp.config("emmet_ls", {
 				capabilities = capabilities,
 				filetypes = { "html", "css", "scss", "less", "javascriptreact", "typescriptreact", "vue" },
 			})
-			lspconfig.cssls.setup({
+			vim.lsp.enable("emmet_ls")
+
+			vim.lsp.config("cssls", {
 				capabilities = capabilities,
 				filetypes = { "css", "scss", "less" },
 			})
-			lspconfig.html.setup({ capabilities = capabilities })
-			lspconfig.nim_langserver.setup({
+			vim.lsp.enable("cssls")
+
+			vim.lsp.config("html", { capabilities = capabilities })
+			vim.lsp.enable("html")
+
+			vim.lsp.config("nim_langserver", {
 				capabilities = capabilities,
 				settings = {
 					nim = {
@@ -86,6 +95,7 @@ return {
 					end,
 				},
 			})
+			vim.lsp.enable("nim_langserver")
 		end,
 	},
 
@@ -108,9 +118,7 @@ return {
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
-					["<CR>"] = cmp.mapping.confirm({
-						select = true,
-					}),
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
